@@ -1,6 +1,6 @@
 ### Folder Structure:
 
-```plaintext
+```
 project_root/
 |-- data/
 |   |-- raw/
@@ -38,6 +38,27 @@ project_root/
 
 ### Code:
 
+#### `src/__init__.py`:
+```python
+# src/__init__.py
+# This file can remain empty, it's used to treat the directory as a package
+```
+
+#### `src/data_preprocessing.py`:
+```python
+# src/data_preprocessing.py
+def preprocess_data(input_data):
+    # Placeholder for data preprocessing logic
+    # Example: Convert input data to uppercase
+    return input_data.upper()
+```
+
+#### `src/utilities.py`:
+```python
+# src/utilities.py
+# Placeholder for utility functions (can be left empty for now)
+```
+
 #### `src/models/generative_model.py`:
 ```python
 # src/models/generative_model.py
@@ -49,6 +70,22 @@ def generate(input_data):
     designs = ["Design A", "Design B", "Design C"]
     generated_design = random.choice(designs)
     return generated_design
+```
+
+#### `src/hydro_power_design.py`:
+```python
+# src/hydro_power_design.py
+def design_hydro_power_plant(generated_design):
+    # Placeholder for hydro power plant design logic
+    # Example logic: Append a description to the generated design
+    if generated_design == "Design A":
+        return "Design A - High Efficiency and Sustainable"
+    elif generated_design == "Design B":
+        return "Design B - Balanced Performance and Cost"
+    elif generated_design == "Design C":
+        return "Design C - Innovative and Eco-Friendly"
+    else:
+        return "Unknown Design"
 ```
 
 #### `src/main.py`:
@@ -101,9 +138,6 @@ def generate_response():
     )
 
     return jsonify({'response': response.choices[0].text.strip()})
-
-if __name__ == '__main__':
-    app.run(debug=True)
 ```
 
 #### `web/static/styles/main.css`:
