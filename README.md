@@ -185,8 +185,6 @@ if __name__ == '__main__':
 </html>
 ```
 
-#### `README.md`:
-```markdown
 # Hydro Power Design Generator
 
 This project is a Hydro Power Design Generator that uses a generative model and interacts with an AI service (e.g., OpenAI GPT-3) for chat-like responses.
